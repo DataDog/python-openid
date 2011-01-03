@@ -6,17 +6,19 @@ from distutils.core import setup
 if 'sdist' in sys.argv:
     os.system('./admin/makedoc')
 
-version = '[library version:2.2.5]'[17:-1]
+version = '[library version:2.2.5-datadog]'[17:-1]
 
 setup(
-    name='python-openid',
+    name='datadog-google-openid',
     version=version,
-    description='OpenID support for servers and consumers.',
+    description='OpenID support for servers and consumers with google apps support.',
     long_description='''This is a set of Python packages to support use of
 the OpenID decentralized identity system in your application.  Want to enable
 single sign-on for your web site?  Use the openid.consumer package.  Want to
 run your own OpenID server? Check out openid.server.  Includes example code
-and support for a variety of storage back-ends.''',
+and support for a variety of storage back-ends.
+Google apps patch added.
+''',
     url='http://github.com/openid/python-openid',
     packages=['openid',
               'openid.consumer',
@@ -28,9 +30,9 @@ and support for a variety of storage back-ends.''',
               ],
     # license specified by classifier.
     # license=getLicense(),
-    author='JanRain',
-    author_email='openid@janrain.com',
-    download_url='http://github.com/openid/python-openid/tarball/%s' % (version,),
+    author='Datadog',
+    author_email='package@datadoghq.com',
+    download_url='http://github.com/FabriceOllivier/python-openid/tarball/%s' % (version,),
     classifiers=[
     "Development Status :: 5 - Production/Stable",
     "Environment :: Web Environment",
